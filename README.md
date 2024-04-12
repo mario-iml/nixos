@@ -1,0 +1,11 @@
+# Installation
+- install nixos on device:
+  - install git
+  - create mario user and set password
+  - think of networking configuration
+  - enable ssh service to access easier if neccesarry
+- ```su mario```
+- git clone dotfiles into ~/ - add ssh key to github (ssh-keygen)
+- ```sudo nixos-rebuild switch --flake ~/dotfiles-nixos/nixos#<host>``` <host> for example default
+- ```cd ~/dotfiles-nixos/```
+- ```stow . --adopt```
