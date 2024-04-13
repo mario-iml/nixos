@@ -18,10 +18,24 @@
   # time zone.
   time.timeZone = "Europe/Dublin";
 
-  # X11 and gnome
+  # Display manager
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
   services.xserver.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  
+  services.xserver.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+  };
+
+  # desktop
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   # keyboard layout
   console = {
     useXkbConfig = true;
@@ -42,6 +56,9 @@
     git
     stow
     gcc
+    kitty
+    mesa-asahi-edge
+    xdg-desktop-portal-hyprland
   ];
 
   # mario user

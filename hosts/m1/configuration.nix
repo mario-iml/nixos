@@ -13,6 +13,26 @@
     rebuild = "sudo nixos-rebuild switch --flake ~/nixos#m1 --impure";
   };
 
+  # setting WLR Graphic Card - needed for hyprland
+  environment.sessionVariables = {
+    WLR_DRM_DEVICES = "/dev/dri/card0";
+  };
+
+  # experimental GPU drivers - needed for hyperland
+  hardware = {
+    asahi = {
+      # peripheralFirmwareDirectory = ./firmware;
+      withRust = true;
+      # addEdgeKernelConfig = true;
+      useExperimentalGPUDriver = true;
+      experimentalGPUInstallMode = "replace";
+    };
+    opengl = {
+      enable = true;
+      driSupport = true;
+    };
+  };
+
   # boot loader
   boot.loader.efi.canTouchEfiVariables = false;
   boot.loader.grub.device = "nodev";
