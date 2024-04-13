@@ -10,3 +10,7 @@
 - git clone dotiles into ~/
 - ```cd ~/dotfiles/```
 - ```stow . --adopt```
+
+# FAQ
+- I get database not found error when running into command-not-found in fish:
+  - ```sudo nix-channel --update```

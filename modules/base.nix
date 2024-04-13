@@ -1,8 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
     [       
+      inputs.home-manager.nixosModules.default
     ];
 
   # enable network manager
@@ -34,18 +35,27 @@
   # Enable sound.
   sound.enable = true;
 
+  # packages
+  environment.systemPackages = with pkgs; [
+    neovim
+    wget
+    git
+    stow
+    gcc
+  ];
+
   # mario user
   users.users.mario = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
   };
 
-  # packages
-  environment.systemPackages = with pkgs; [
-    neovim
-    wget
-    git
-    firefox
-  ];
+  # home-manager for user
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "mario" = import ./mario.nix;
+    };
+  };
 }
 
