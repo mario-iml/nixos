@@ -57,5 +57,9 @@
       "mario" = import ./mario.nix;
     };
   };
+
+  # shell
+  programs.fish.enable = true;
+  users.users.mario.shell = pkgs.fish;
 }
 

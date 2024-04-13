@@ -4,7 +4,15 @@
   home.username = "mario";
   home.homeDirectory = "/home/mario";
 
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set fish_greeting
+    '';
+    plugins = [
+      # { name = "grc"; src = pkgs.fishPlugins.grc.src; }
+    ];
+  };
 
   # environment.
   home.packages = [

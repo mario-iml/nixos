@@ -9,9 +9,9 @@
     ];
 
   # rebuild alias
-  environment.interactiveShellInit = ''
-    alias rebuild='sudo nixos-rebuild switch --flake ~/nixos#m1 --impure'
-  '';
+  environment.shellAliases = {
+    rebuild = "sudo nixos-rebuild switch --flake ~/nixos#m1 --impure";
+  };
 
   # boot loader
   boot.loader.efi.canTouchEfiVariables = false;
