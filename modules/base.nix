@@ -57,8 +57,10 @@
     stow
     gcc
     kitty
-    mesa-asahi-edge
-    xdg-desktop-portal-hyprland
+    wofi
+    waybar
+    hyprpaper
+    psmisc
   ];
 
   # mario user

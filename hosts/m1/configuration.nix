@@ -33,6 +33,12 @@
     };
   };
 
+  # packages
+  environment.systemPackages = with pkgs; [
+    mesa-asahi-edge
+    xdg-desktop-portal-hyprland
+  ];
+
   # boot loader
   boot.loader.efi.canTouchEfiVariables = false;
   boot.loader.grub.device = "nodev";
