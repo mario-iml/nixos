@@ -28,6 +28,14 @@
     pavucontrol
     armcord
     vesktop # needed for discord streaming
+    nwg-look
+    # gtk theme
+    (catppuccin-gtk.override {
+      accents = [ "flamingo" ]; # You can specify multiple accents here to output multiple themes
+      size = "compact";
+      tweaks = [ "rimless" "black" ]; # You can also specify multiple tweaks here
+      variant = "mocha";
+    })
   ];
 
   # armcord desktop file - fix blurry window in wayland

@@ -59,6 +59,7 @@
     hyprpaper
     psmisc
     htop
+    unzip
   ];
 
   # mario user
