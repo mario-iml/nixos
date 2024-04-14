@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "mario";
@@ -17,16 +17,30 @@
   # environment.
   home.packages = with pkgs; [
     firefox
+    chromium
     (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
     kitty
     wofi
     waybar
     neofetch
     pulseaudio
+    mako # notifications
+    pavucontrol
+    armcord
+    vesktop # needed for discord streaming
   ];
+
+  # armcord desktop file - fix blurry window in wayland
+  xdg.desktopEntries.armcord = {
+    name = "Armcord";
+    genericName = "Armcord";
+    exec = "armcord --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
 
   home.sessionVariables = {
     # EDITOR = nvim;
+    # chromium pixelated fix
+    NIXOS_OZONE_WL = "1"; # - set in chrome://flags
   };
 
   # Let Home Manager install and manage itself.
