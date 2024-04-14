@@ -56,11 +56,9 @@
     git
     stow
     gcc
-    kitty
-    wofi
-    waybar
     hyprpaper
     psmisc
+    htop
   ];
 
   # mario user

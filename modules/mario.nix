@@ -15,9 +15,14 @@
   };
 
   # environment.
-  home.packages = [
-    pkgs.firefox
-    (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+  home.packages = with pkgs; [
+    firefox
+    (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    kitty
+    wofi
+    waybar
+    neofetch
+    pulseaudio
   ];
 
   home.sessionVariables = {
