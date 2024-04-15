@@ -56,16 +56,19 @@
     git
     stow
     gcc
-    hyprpaper
     psmisc
     htop
     unzip
+    networkmanagerapplet
+    apfs-fuse
   ];
+
+  programs.nm-applet.enable = true;
 
   # mario user
   users.users.mario = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "networkmanager" ];
   };
 
   # home-manager for user

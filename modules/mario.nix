@@ -14,21 +14,36 @@
     ];
   };
 
+  # allow specific unfree packages
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "vscode"
+    ];
+
   # environment.
   home.packages = with pkgs; [
     firefox
     chromium
+    dolphin
     (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
     kitty
+    terminator
     wofi
     waybar
+    hyprpaper    
     neofetch
     pulseaudio
     mako # notifications
     pavucontrol
     armcord
     vesktop # needed for discord streaming
+    pipewire # needed for streaming
+    linphone
     nwg-look
+    networkmanager-openvpn 
+    vscode
+    libreoffice
+    
     # gtk theme
     (catppuccin-gtk.override {
       accents = [ "flamingo" ]; # You can specify multiple accents here to output multiple themes
@@ -43,6 +58,13 @@
     name = "Armcord";
     genericName = "Armcord";
     exec = "armcord --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
+
+  # vs code desktop file - fix blurry window in wayland
+  xdg.desktopEntries.code = {
+    name = "Visual Studio Code";
+    genericName = "Code Editor";
+    exec = "code --enable-features=UseOzonePlatform --ozone-platform=wayland";
   };
 
   home.sessionVariables = {
