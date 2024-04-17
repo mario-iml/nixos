@@ -58,17 +58,22 @@
     gcc
     psmisc
     htop
+    btop
     unzip
     networkmanagerapplet
     apfs-fuse
+
+    # eduroam
+    openssl
   ];
 
   programs.nm-applet.enable = true;
+  virtualisation.docker.enable = true;
 
   # mario user
   users.users.mario = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "docker"];
   };
 
   # home-manager for user
@@ -82,5 +87,15 @@
   # shell
   programs.fish.enable = true;
   users.users.mario.shell = pkgs.fish;
+
+  # firewall
+  networking.firewall = {
+    enable = false;
+    #allowedTCPPorts = [ 80 443 ];
+    #allowedUDPPortRanges = [
+      #  { from = 4000; to = 4007; }
+      #  { from = 8000; to = 8010; }
+    #];
+  };
 }
 

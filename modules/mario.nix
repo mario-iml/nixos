@@ -13,7 +13,7 @@
       # { name = "grc"; src = pkgs.fishPlugins.grc.src; }
     ];
   };
-
+ 
   # allow specific unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
@@ -24,7 +24,6 @@
   home.packages = with pkgs; [
     firefox
     chromium
-    dolphin
     (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
     kitty
     terminator
@@ -38,11 +37,14 @@
     armcord
     vesktop # needed for discord streaming
     pipewire # needed for streaming
+    wireplumber # needed for streaming
     linphone
     nwg-look
     networkmanager-openvpn 
     vscode
     libreoffice
+    thunderbird
+    brightnessctl
     
     # gtk theme
     (catppuccin-gtk.override {
