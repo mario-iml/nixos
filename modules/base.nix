@@ -77,6 +77,7 @@
     neofetch
     pulseaudio
     mako # notifications
+    libnotify
     pavucontrol
   ];
 
