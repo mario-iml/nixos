@@ -73,6 +73,9 @@
     wofi
     waybar
     hyprpaper
+    hyprpicker
+    hyprlock
+    hypridle
     neofetch
     pulseaudio
     mako # notifications
