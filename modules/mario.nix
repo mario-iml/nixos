@@ -40,9 +40,10 @@
     thunderbird
     brightnessctl
 
+
     # gtk theme
     (catppuccin-gtk.override {
-      accents = ["mauve"]; # You can specify multiple accents here to output multiple themes
+      accents = ["flamingo"]; # You can specify multiple accents here to output multiple themes
       size = "compact";
       tweaks = ["rimless" "black"]; # You can also specify multiple tweaks here
       variant = "mocha";
