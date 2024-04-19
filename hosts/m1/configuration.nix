@@ -12,7 +12,7 @@
 
   # rebuild alias
   environment.shellAliases = {
-    nixos-rebuild = "sudo nixos-rebuild switch --flake ~/nixos#m1 --impure";
+    rebuild-command = "sudo nixos-rebuild switch --flake ~/nixos#m1 --impure";
     rebuild = "bash -i ~/nixos/nixos-rebuild.sh";
   };
 
