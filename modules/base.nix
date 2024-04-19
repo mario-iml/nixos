@@ -69,8 +69,6 @@
     # eduroam
     openssl
 
-    kitty
-    terminator
     alacritty
     wofi
     waybar
