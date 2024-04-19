@@ -71,6 +71,7 @@
 
     kitty
     terminator
+    alacritty
     wofi
     waybar
     hyprpaper
