@@ -1,13 +1,16 @@
-{ config, lib, pkgs, inputs, ... }:
-
 {
-  imports =
-    [       
-      inputs.home-manager.nixosModules.default
-    ];
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    inputs.home-manager.nixosModules.default
+  ];
 
   # enable network manager
-  networking.networkmanager.enable = true; 
+  networking.networkmanager.enable = true;
 
   # wifi
   networking.wireless.iwd = {
@@ -21,7 +24,7 @@
   # Display manager
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = [pkgs.xdg-desktop-portal-hyprland];
   };
   services.xserver.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
@@ -51,7 +54,6 @@
 
   # packages
   environment.systemPackages = with pkgs; [
-    neovim
     wget
     git
     stow
@@ -62,10 +64,26 @@
     unzip
     networkmanagerapplet
     apfs-fuse
+    alejandra
 
     # eduroam
     openssl
+
+    kitty
+    terminator
+    wofi
+    waybar
+    hyprpaper
+    neofetch
+    pulseaudio
+    mako # notifications
+    pavucontrol
   ];
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   programs.nm-applet.enable = true;
   virtualisation.docker.enable = true;
@@ -73,7 +91,7 @@
   # mario user
   users.users.mario = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker"];
+    extraGroups = ["wheel" "networkmanager" "docker"];
   };
 
   # home-manager for user
@@ -93,9 +111,8 @@
     enable = false;
     #allowedTCPPorts = [ 80 443 ];
     #allowedUDPPortRanges = [
-      #  { from = 4000; to = 4007; }
-      #  { from = 8000; to = 8010; }
+    #  { from = 4000; to = 4007; }
+    #  { from = 8000; to = 8010; }
     #];
   };
 }
-

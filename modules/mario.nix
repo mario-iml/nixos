@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   home.username = "mario";
   home.homeDirectory = "/home/mario";
 
@@ -13,7 +16,7 @@
       # { name = "grc"; src = pkgs.fishPlugins.grc.src; }
     ];
   };
- 
+
   # allow specific unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
@@ -24,33 +27,24 @@
   home.packages = with pkgs; [
     firefox
     chromium
-    (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-    kitty
-    terminator
-    wofi
-    waybar
-    hyprpaper    
-    neofetch
-    pulseaudio
-    mako # notifications
-    pavucontrol
+    (nerdfonts.override {fonts = ["FantasqueSansMono"];})
     armcord
     vesktop # needed for discord streaming
     pipewire # needed for streaming
     wireplumber # needed for streaming
     linphone
     nwg-look
-    networkmanager-openvpn 
+    networkmanager-openvpn
     vscode
     libreoffice
     thunderbird
     brightnessctl
-    
+
     # gtk theme
     (catppuccin-gtk.override {
-      accents = [ "flamingo" ]; # You can specify multiple accents here to output multiple themes
+      accents = ["flamingo"]; # You can specify multiple accents here to output multiple themes
       size = "compact";
-      tweaks = [ "rimless" "black" ]; # You can also specify multiple tweaks here
+      tweaks = ["rimless" "black"]; # You can also specify multiple tweaks here
       variant = "mocha";
     })
   ];
@@ -79,5 +73,5 @@
   programs.home-manager.enable = true;
 
   # minimum version - compatibility
-  home.stateVersion = "23.11"; 
+  home.stateVersion = "23.11";
 }
