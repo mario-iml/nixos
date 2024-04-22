@@ -65,6 +65,8 @@
     networkmanagerapplet
     apfs-fuse
     alejandra
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
 
     # eduroam
     openssl
