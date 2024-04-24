@@ -81,7 +81,7 @@
     hypridle
     neofetch
     pulseaudio
-    mako # notifications
+    swaynotificationcenter # notifications
     libnotify
     pavucontrol
     fzf
