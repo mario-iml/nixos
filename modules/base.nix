@@ -63,6 +63,7 @@
     btop
     unzip
     networkmanagerapplet
+    blueman
     apfs-fuse
     alejandra
     xdg-desktop-portal
