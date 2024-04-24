@@ -83,6 +83,7 @@
     mako # notifications
     libnotify
     pavucontrol
+    fzf
   ];
 
   programs.neovim = {
