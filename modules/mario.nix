@@ -17,7 +17,7 @@
   home.packages = with pkgs; [
     firefox
     chromium
-    (nerdfonts.override {fonts = ["FantasqueSansMono"];})
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
     armcord
     vesktop # needed for discord streaming
     pipewire # needed for streaming
