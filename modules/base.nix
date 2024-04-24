@@ -109,8 +109,8 @@
   };
 
   # shell
-  programs.fish.enable = true;
-  users.users.mario.shell = pkgs.fish;
+  programs.zsh.enable = true;
+  users.users.mario.shell = pkgs.zsh;
 
   # firewall
   networking.firewall = {
