@@ -52,6 +52,11 @@
   # Enable sound.
   sound.enable = true;
 
+  # aliases
+  environment.shellAliases = {
+    vim = "nvim";
+  };
+
   # packages
   environment.systemPackages = with pkgs; [
     wget
