@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ./apple-silicon-support
     ../../modules/base.nix
+    ../../modules/gaming-mac.nix
   ];
 
   # rebuild alias
