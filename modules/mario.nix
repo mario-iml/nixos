@@ -60,7 +60,7 @@
   xdg.desktopEntries.vivaldi = {
     name = "Vivaldi";
     genericName = "Browser";
-    exec = "vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland";
+    exec = "vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland --disable-seccomp-filter-sandbox --user-agent=\"Chrome/110.0.0.0\"";
   };
 
   home.sessionVariables = {
