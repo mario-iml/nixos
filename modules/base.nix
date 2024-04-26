@@ -90,6 +90,7 @@
     libnotify
     pavucontrol
     fzf
+    flameshot
   ];
 
   programs.neovim = {
