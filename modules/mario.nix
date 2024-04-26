@@ -56,6 +56,13 @@
     exec = "code --enable-features=UseOzonePlatform --ozone-platform=wayland";
   };
 
+  # vivaldi desktop file - fix blurry window in wayland
+  xdg.desktopEntries.vivaldi = {
+    name = "Vivaldi";
+    genericName = "Browser";
+    exec = "vivaldi --enable-features=UseOzonePlatform --ozone-platform=wayland";
+  };
+
   home.sessionVariables = {
     # EDITOR = nvim;
     # chromium pixelated fix
