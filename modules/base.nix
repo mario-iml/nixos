@@ -7,6 +7,7 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.default
+    ./nordvpn.nix
   ];
 
   # enable network manager
