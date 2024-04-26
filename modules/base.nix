@@ -90,7 +90,11 @@
     libnotify
     pavucontrol
     fzf
-    flameshot
+
+    # screenshot
+    grim
+    swappy
+    slurp
   ];
 
   programs.neovim = {
