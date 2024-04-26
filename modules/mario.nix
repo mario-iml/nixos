@@ -11,12 +11,14 @@
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "vscode"
+      "vivaldi"
     ];
 
   # environment.
   home.packages = with pkgs; [
     firefox
     chromium
+    vivaldi
     (nerdfonts.override {fonts = ["FantasqueSansMono"];})
     armcord
     vesktop # needed for discord streaming
