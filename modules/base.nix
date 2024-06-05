@@ -7,9 +7,10 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.default
+    ./base.nix
   ];
 
-  # nix experimental features
+  # nix experimental features/options
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # enable network manager
