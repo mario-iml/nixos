@@ -36,12 +36,6 @@
     wayland = true;
   };
 
-  # desktop
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
   # keyboard layout
   console = {
     useXkbConfig = true;
@@ -70,34 +64,16 @@
     htop
     btop
     unzip
-    networkmanagerapplet
-    blueman
     apfs-fuse
     alejandra
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
 
     # eduroam
     openssl
 
     alacritty
-    wofi
-    waybar
-    hyprpaper
-    hyprpicker
-    hyprlock
-    hypridle
     neofetch
     pulseaudio
-    swaynotificationcenter # notifications
-    libnotify
-    pavucontrol
     fzf
-
-    # screenshot
-    grim
-    swappy
-    slurp
   ];
 
   programs.neovim = {
@@ -105,13 +81,12 @@
     defaultEditor = true;
   };
 
-  programs.nm-applet.enable = true;
   virtualisation.docker.enable = true;
 
   # mario user
   users.users.mario = {
     isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager" "docker"];
+    extraGroups = ["wheel" "networkmanager" "docker" "video" "input"];
   };
 
   # home-manager for user
