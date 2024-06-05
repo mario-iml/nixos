@@ -1,23 +1,29 @@
 warning: Git tree '/home/mario/nixos' is dirty
-error:
-       … while calling the 'seq' builtin
-
-         at /nix/store/6bf943g0mlhymyffs9dflzgc78r93s60-source/lib/modules.nix:322:18:
-
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |                  ^
-          323|         _module = checked (config._module);
-
-       … while evaluating a branch condition
-
-         at /nix/store/6bf943g0mlhymyffs9dflzgc78r93s60-source/lib/modules.nix:261:9:
-
-          260|       checkUnmatched =
-          261|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [] then
-             |         ^
-          262|           let
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: getting status of '/nix/store/6mlmpmf5ql8331gh70fq95lrbwlrafwl-source/modules/nordvpn.nix': No such file or directory
+building the system configuration...
+warning: Git tree '/home/mario/nixos' is dirty
+building '/nix/store/4c0dcy9rh1kvr9n32wnfrrjmi7f3nlq3-nix.conf.drv'...
+building '/nix/store/6xff7lx003g29n9p5fpnajqsb35hfq4x-X-Restart-Triggers-nix-daemon.drv'...
+building '/nix/store/vr4nka99wsg6453bsv9gsifhmd327pjj-unit-nix-daemon.service.drv'...
+building '/nix/store/2p4xj5clwan9kvcin106nvna2w5zdzkm-system-units.drv'...
+building '/nix/store/1pwakpp2w4rcfqy77q1ls0cpmb3bdp5z-etc.drv'...
+building '/nix/store/c0zg33l4jw17gga91ly9w8pnyyjnaxan-nixos-system-NixOsMarioM1-24.05.20240416.66adc1e.drv'...
+building '/nix/store/zpbfk4lpd4ghr7iq2ka07lc67i4bilng-references.nix.drv'...
+these 3 derivations will be built:
+  /nix/store/xv89im7wfsczz6k1wkwr3fnp4n8jxbw4-system-units.drv
+  /nix/store/iazp9ify01m2hizrpgdv50by65gvnbvh-etc.drv
+  /nix/store/4dbgsbm7yzlz74385lcxhz9hm2smyg01-nixos-system-NixOsMarioM1-24.05.20240416.66adc1e.drv
+building '/nix/store/xv89im7wfsczz6k1wkwr3fnp4n8jxbw4-system-units.drv'...
+building '/nix/store/iazp9ify01m2hizrpgdv50by65gvnbvh-etc.drv'...
+building '/nix/store/4dbgsbm7yzlz74385lcxhz9hm2smyg01-nixos-system-NixOsMarioM1-24.05.20240416.66adc1e.drv'...
+updating GRUB 2 menu...
+Warning: os-prober will be executed to detect other bootable partitions.
+Its output will be used to detect bootable binaries on them and create new boot entries.
+lsblk: /dev/mapper/no*[0-9]: not a block device
+lsblk: /dev/mapper/block*[0-9]: not a block device
+lsblk: /dev/mapper/devices*[0-9]: not a block device
+lsblk: /dev/mapper/found*[0-9]: not a block device
+activating the configuration...
+setting up /etc...
+reloading user units for mario...
+restarting sysinit-reactivation.target
+restarting the following units: nix-daemon.service

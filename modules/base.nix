@@ -7,8 +7,10 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.default
-    ./nordvpn.nix
   ];
+
+  # nix experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # enable network manager
   networking.networkmanager.enable = true;
