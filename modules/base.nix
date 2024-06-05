@@ -7,7 +7,7 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.default
-    ./base.nix
+    ./hyprland.nix
   ];
 
   # nix experimental features/options
