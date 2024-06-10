@@ -23,7 +23,7 @@
   };
 
   # time zone.
-  time.timeZone = "Europe/Dublin";
+  time.timeZone = "Europe/Berlin";
 
   # Display manager
   xdg.portal = {
