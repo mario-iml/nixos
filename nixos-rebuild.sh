@@ -16,7 +16,7 @@ set -e
 pushd ~/nixos/
 
 # git pull
-git pull & sleep 10s; kill $!
+git pull & sleep 5s; kill $!
 
 # Edit your config
 $EDITOR
