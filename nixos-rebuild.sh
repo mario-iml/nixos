@@ -15,6 +15,9 @@ set -e
 # cd to your config dir
 pushd ~/nixos/
 
+# git pull
+git pull & sleep 10s; kill $!
+
 # Edit your config
 $EDITOR
 
