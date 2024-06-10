@@ -75,6 +75,7 @@
     neofetch
     pulseaudio
     fzf
+    remmina
   ];
 
   programs.neovim = {
