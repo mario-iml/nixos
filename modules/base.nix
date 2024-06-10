@@ -76,6 +76,7 @@
     pulseaudio
     fzf
     remmina
+    keepassxc
   ];
 
   programs.neovim = {
