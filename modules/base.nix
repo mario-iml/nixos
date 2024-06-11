@@ -77,7 +77,6 @@
     fzf
     remmina
     keepassxc
-    flameshot
   ];
 
   programs.neovim = {

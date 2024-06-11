@@ -36,9 +36,6 @@
     grim
     swappy
     slurp
-
-    # https://github.com/end-4/dots-hyprland
-    axel
   ];
 
   programs.nm-applet.enable = true;
