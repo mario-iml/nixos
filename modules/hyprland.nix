@@ -36,6 +36,7 @@
     grim
     swappy
     slurp
+    wl-clipboard
   ];
 
   programs.nm-applet.enable = true;
