@@ -77,6 +77,7 @@
     fzf
     remmina
     keepassxc
+    pinta
   ];
 
   programs.neovim = {
