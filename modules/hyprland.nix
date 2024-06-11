@@ -11,6 +11,10 @@
     xwayland.enable = true;
   };
 
+  environment.sessionVariables = rec {
+    XDG_CURRENT_DESKTOP = "hyprland";
+  };
+
   environment.systemPackages = with pkgs; [ 
     xdg-desktop-portal
     xdg-desktop-portal-gtk
