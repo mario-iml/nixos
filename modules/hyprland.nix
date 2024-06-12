@@ -37,6 +37,9 @@
     swappy
     slurp
     wl-clipboard
+
+    # widgets/bar
+    eww
   ];
 
   programs.nm-applet.enable = true;
