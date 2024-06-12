@@ -8,6 +8,7 @@
   imports = [
     inputs.home-manager.nixosModules.default
     ./hyprland.nix
+    ./x86only.nix
   ];
 
   # nix experimental features/options
