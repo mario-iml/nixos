@@ -91,7 +91,7 @@
   # mario user
   users.users.mario = {
     isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager" "docker" "video" "input"];
+    extraGroups = ["wheel" "networkmanager" "docker" "video" "input" "kvm" "adbusers"];
   };
 
   # home-manager for user
