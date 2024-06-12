@@ -13,6 +13,7 @@
   environment.shellAliases = {
     rebuild-command = "sudo nixos-rebuild switch --flake ~/nixos#pc";
     rebuild = "bash -i ~/nixos/nixos-rebuild.sh";
+    update = "nix flake update --flake ~/nixos";
   };
 
   # boot loader
