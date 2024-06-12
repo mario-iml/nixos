@@ -11,6 +11,10 @@
     xwayland.enable = true;
   };
 
+  environment.sessionVariables = rec {
+    XDG_CURRENT_DESKTOP = "hyprland";
+  };
+
   environment.systemPackages = with pkgs; [ 
     xdg-desktop-portal
     xdg-desktop-portal-gtk
@@ -32,9 +36,10 @@
     grim
     swappy
     slurp
+    wl-clipboard
 
-    # https://github.com/end-4/dots-hyprland
-    axel
+    # widgets/bar
+    eww
   ];
 
   programs.nm-applet.enable = true;
