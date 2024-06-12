@@ -14,7 +14,7 @@
   environment.shellAliases = {
     rebuild-command = "sudo nixos-rebuild switch --flake ~/nixos#m1 --impure";
     rebuild = "bash -i ~/nixos/nixos-rebuild.sh";
-    update = "nix flake update --flake ~/nixos";
+    update = "cd ~/nixos && nix flake update";
   };
 
   # setting WLR Graphic Card - needed for hyprland
