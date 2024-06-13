@@ -68,6 +68,7 @@
     unzip
     apfs-fuse
     alejandra
+    jq
 
     # eduroam
     openssl
