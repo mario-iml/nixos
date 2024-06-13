@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ./apple-silicon-support
     ../../modules/base.nix
+    ../../modules/armonly.nix
   ];
 
   # rebuild alias

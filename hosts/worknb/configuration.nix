@@ -7,6 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/base.nix
+    ../../modules/x86only.nix
   ];
 
   # rebuild alias

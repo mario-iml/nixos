@@ -33,6 +33,7 @@
     blueman
     nwg-look
     hyprland-workspaces
+    brightnessctl
 
     # screenshot
     grim

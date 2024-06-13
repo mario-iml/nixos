@@ -16,24 +16,7 @@
 
   # environment.
   home.packages = with pkgs; [
-    firefox
-    chromium
-    vivaldi
-
     (nerdfonts.override {fonts = ["FantasqueSansMono"];})
-
-    linphone
-    vscode
-    libreoffice
-    thunderbird
-
-    armcord
-    vesktop # needed for discord streaming
-    pipewire # needed for streaming
-    wireplumber # needed for streaming
-
-    brightnessctl
-    networkmanager-openvpn
 
     # gtk theme
     (catppuccin-gtk.override {

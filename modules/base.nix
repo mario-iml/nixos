@@ -8,7 +8,7 @@
   imports = [
     inputs.home-manager.nixosModules.default
     ./hyprland.nix
-    ./x86only.nix
+    ./unfree.nix
   ];
 
   # nix experimental features/options
@@ -80,6 +80,21 @@
     remmina
     keepassxc
     pinta
+
+    firefox
+    chromium
+    vivaldi
+ 
+    linphone
+    vscode
+    libreoffice
+    thunderbird
+
+    networkmanager-openvpn
+
+    vesktop # needed for discord streaming
+    pipewire # needed for streaming
+    wireplumber # needed for streaming
   ];
 
   programs.neovim = {
