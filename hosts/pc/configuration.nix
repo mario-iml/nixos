@@ -14,6 +14,7 @@
     rebuild-command = "sudo nixos-rebuild switch --flake ~/nixos#pc";
     rebuild = "bash -i ~/nixos/nixos-rebuild.sh";
     update = "cd ~/nixos && nix flake update";
+    repari-nix = "nix-store --verify --check-contents --repair";
   };
 
   # boot loader

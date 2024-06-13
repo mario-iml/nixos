@@ -15,6 +15,7 @@
     rebuild-command = "sudo nixos-rebuild switch --flake ~/nixos#m1 --impure";
     rebuild = "bash -i ~/nixos/nixos-rebuild.sh";
     update = "cd ~/nixos && nix flake update";
+    repari-nix = "nix-store --verify --check-contents --repair";
   };
 
   # setting WLR Graphic Card - needed for hyprland
