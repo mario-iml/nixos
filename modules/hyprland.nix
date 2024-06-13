@@ -31,6 +31,7 @@
     networkmanagerapplet
     blueman
     nwg-look
+    hyprland-workspaces
 
     # screenshot
     grim
