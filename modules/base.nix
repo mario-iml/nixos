@@ -71,6 +71,8 @@
     alejandra
     jq
 
+    python3
+
     # eduroam
     openssl
 
