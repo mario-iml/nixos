@@ -64,6 +64,7 @@
 
   # packages
   environment.systemPackages = with pkgs; [
+    calc
     wget
     git
     gh
