@@ -56,6 +56,12 @@
     vim = "nvim";
   };
 
+  environment = {
+    sessionVariables = {
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+    };
+  };
+
   # packages
   environment.systemPackages = with pkgs; [
     wget
