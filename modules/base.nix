@@ -77,6 +77,9 @@
     # eduroam
     openssl
 
+    # nordvpn
+    wgnord
+
     alacritty
     neofetch
     pulseaudio
