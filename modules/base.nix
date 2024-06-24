@@ -75,7 +75,6 @@
     rustc
 
     nodejs_22
-    nodejs_18
 
     python3
     python3.pkgs.pip
