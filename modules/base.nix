@@ -74,6 +74,8 @@
     cargo
     rustc
 
+    nodejs_22
+
     python3
     python3.pkgs.pip
 
