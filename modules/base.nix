@@ -97,6 +97,7 @@
  
     linphone
     vscode
+    zed-editor
     libreoffice
     thunderbird
 
