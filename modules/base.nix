@@ -78,6 +78,7 @@
 
     python3
     python3.pkgs.pip
+    python3.pkgs.numpy
 
     # eduroam
     openssl
