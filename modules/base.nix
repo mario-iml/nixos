@@ -71,6 +71,9 @@
     alejandra
     jq
 
+    cargo
+    rustc
+
     python3
     python3.pkgs.pip
 
