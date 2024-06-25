@@ -88,7 +88,7 @@
 
     cargo
     rustup
-    openssl
+    dioxus-cli
 
     nodejs_22
 
