@@ -62,6 +62,14 @@
     };
   };
 
+  # ensure /bin/bash is found
+  system.activationScripts.binbash = {
+    deps = [ "binsh" ];
+    text = ''
+         ln -s /bin/sh /bin/bash
+    '';
+  };
+
   # packages
   environment.systemPackages = with pkgs; [
     calc
