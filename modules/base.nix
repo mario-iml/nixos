@@ -63,12 +63,12 @@
   };
 
   # ensure /bin/bash is found
-  system.activationScripts.binbash = {
-    deps = [ "binsh" ];
-    text = ''
-         ln -s /bin/sh /bin/bash
-    '';
-  };
+  #system.activationScripts.binbash = {
+  #  deps = [ "binsh" ];
+  #  text = ''
+  #       ln -s /bin/sh /bin/bash
+  #  '';
+  #};
 
   # packages
   environment.systemPackages = with pkgs; [
@@ -91,8 +91,10 @@
 
     nodejs_22
 
-    python3
-    python3.pkgs.pip
+    (python3.withPackages (subpkgs: with subpkgs; [
+        pip
+        pygobject3
+      ]))
 
     # eduroam
     openssl
