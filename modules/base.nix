@@ -88,6 +88,7 @@
 
     cargo
     rustc
+    rustup
 
     nodejs_22
 
