@@ -87,8 +87,8 @@
     jq
 
     cargo
-    rustc
     rustup
+    openssl
 
     nodejs_22
 
