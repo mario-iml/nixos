@@ -128,6 +128,9 @@
     wireplumber # needed for streaming
   ];
 
+  # openvpn resolv conf fix
+  environment.etc."openvpn/update-resolv-conf".source = "${pkgs.update-resolv-conf}/libexec/openvpn/update-resolv-conf";
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
